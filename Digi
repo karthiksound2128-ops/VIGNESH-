@@ -1,1 +1,119 @@
-Digi
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Karthik Sound — Portfolio</title>
+  <meta name="description" content="Portfolio of Karthik Sound — web developer, projects, contact." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Karthik Sound</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi — I'm Karthik</h1>
+          <p class="lead">Front-end developer building accessible, responsive web experiences. I love HTML, CSS, and clean UI.</p>
+          <p>
+            <a class="btn" href="#projects">See my work</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </p>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <!-- Replace with your portrait or image -->
+          <div class="avatar">KS</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About</h2>
+      <p>I design and build user-focused websites and small web apps. I write semantic HTML, modular CSS, and aim for performance & accessibility.</p>
+      <ul class="skills">
+        <li>HTML & semantic markup</li>
+        <li>Responsive CSS (Flexbox & Grid)</li>
+        <li>Accessibility basics (a11y)</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <article class="project">
+          <h3>Project One</h3>
+          <p>Short summary of the project. What you built and the tech used.</p>
+          <p><a href="#" class="project-link" target="_blank" rel="noopener">View project</a></p>
+        </article>
+
+        <article class="project">
+          <h3>Project Two</h3>
+          <p>Short summary: problem solved and approach.</p>
+          <p><a href="#" class="project-link" target="_blank" rel="noopener">View project</a></p>
+        </article>
+
+        <article class="project">
+          <h3>Project Three</h3>
+          <p>Short summary: outcome and link to code or demo.</p>
+          <p><a href="#" class="project-link" target="_blank" rel="noopener">View project</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate or hire me, email <a href="mailto:your.email@example.com">your.email@example.com</a> or connect on <a href="#" target="_blank" rel="noopener">LinkedIn</a>.</p>
+
+      <form class="contact-form" action="mailto:your.email@example.com" method="get" enctype="text/plain" aria-label="Contact form">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Karthik Sound — Built with ❤️ • <a href="README.md">Repository</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // small script: set year and toggle mobile nav
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open');
+      });
+    })();
+  </script>
+</body>
+</html>
